@@ -77,6 +77,48 @@
 #Game #Start:hover {
   transform: translateY(-60%);
 }
+#Game #Start:hover::before {
+  transform: translateX(0%);
+}
+#Game #Start:hover::after {
+  transform: translateX(0%);
+}
+#Game #Start:hover .start-content h4 {
+  color: rgb(25, 116, 135);
+}
+#Game #Start:hover .start-content i {
+  color: rgb(25, 116, 135);
+}
+#Game #Start::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  right: initial;
+  top: 0;
+  bottom: initial;
+  z-index: initial;
+  transform: translateX(100%);
+  transition-duration: 0.5s;
+}
+#Game #Start::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: initial;
+  right: 0;
+  top: 0;
+  bottom: initial;
+  z-index: initial;
+  transform: translateX(-100%);
+  transition-duration: 0.5s;
+}
 #Game #Start {
   position: absolute;
   left: 0;
@@ -90,17 +132,27 @@
   background-color: rgb(25, 116, 135);
   box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 5px;
 }
-#Game #Start h4 {
+#Game #Start .start-content {
+  position: relative;
+  left: initial;
+  right: initial;
+  top: initial;
+  bottom: initial;
+  z-index: 2;
+}
+#Game #Start .start-content h4 {
   letter-spacing: 5px;
   font-size: 30px;
+  transition-duration: 0.5s;
   color: #fff;
   font-weight: bold;
   text-shadow: rgb(193, 8, 57) 2px 0px 2px;
 }
-#Game #Start i {
+#Game #Start .start-content i {
   color: #fff;
   font-size: 30px;
   cursor: pointer;
+  transition-duration: 0.5s;
   font-weight: bold;
   text-shadow: rgb(193, 8, 57) 2px 0px 2px;
 }
