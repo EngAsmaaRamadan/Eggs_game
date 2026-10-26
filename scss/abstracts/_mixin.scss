@@ -5,7 +5,7 @@
 	height: $h;
 }
 
-@mixin position($p:relative,$l:initial,$r:initial,$t:initial, $b:initial,$z:initial){
+@mixin position($p:absolute,$l:initial,$r:initial,$t:initial, $b:initial,$z:initial){
 	position: $p;
 	left: $l;
 	right: $r;

@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta name="keywords" content="HTML, CSS, Pure JavaScript, jquery, bootstrap, free api"/>
 	<meta name="author" content="" />
-	<title>L10 House</title>
-	<link rel="icon" type="images/x-icon" href="images/logo.png">
+	<title>Drop Egg Game</title>
+		<link rel="icon" type="images/x-icon" href="images/mini_logo.png">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/plugins/headlinesAnimated.css">
@@ -18,387 +18,46 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg position-fixed">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-    	<img src="images/logo.png" alt="logo" class="img-fluid">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 column-gap-3 text-center row-gap-3">
+	<div id="Game">
+		<nav class="text-center py-2">
+			<h5>Score : <span class="score">0</span> |
+			 <span class="textScore">Life Score</span> : <span id="LifeScore">0</span> |
+  Highest Score : <span id="HighestScore">0</span> |
+  Use mouse to control</h5>
+		</nav>
 
-        <li class="nav-item mt-3 mt-lg-0">
-          <a class="nav-link p-0 active" aria-current="page" href="#Home">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#AboutUs">About Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#Services">Services</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#WhyUs">Why Us?</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#LanguageSectors">Language & Sectors</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#ContactUs">Contact Us</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link p-0" href="#NewVendor!">New Vendor!</a>
-        </li>
-
-        <li class="nav-item dropdown mb-3 mb-lg-0">
-          <a class="nav-link p-0" href="#Login" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Login
-          </a>
-
-          <ul class="dropdown-menu mt-2 mt-lg-0" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Vendor Login</a></li>
-            <li><a class="dropdown-item" href="#">Client Login action</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><button class="changeMode" onclick="changeMode();"><div class="circle">
-        	<i class="fa-regular fa-sun sun"></i>
-        	<i class="fa-solid fa-moon moon"></i>
-        </div></button></li>
-      </ul>
-      
-    </div>
-  </div>
-</nav>
-
-<header class="vh-100 py-5" id="Home">
-	<div class="container h-100">
-		<div class="row h-100">
-			<div class="col-md-6 part part1">
-				<div class="item h-100 wow animate__fadeInLeft" data-wow-duration="1.5s">
-					<h2 class="h1 firstColor mb-3">L10N House</h2>
-					<p>will help you communicate your message</p>
-					<div class="cd-intro m-0" id="HeadLine">
-						<h6 class="cd-headline clip is-full-width secondColor mb-3">
-							<!-- <span>My favourite food is</span> -->
-							<span class="cd-words-wrapper">
-								<b>Eloquenty.</b>
-								<b>Professionaly.</b>
-								<b class="is-visible">Directly to your audience.</b>
-							</span>
-						</h6>
-					</div> <!-- cd-intro -->
-					<ul class="list-unstyled d-flex column-gap-3">
-						<li><a href="#Video"><i class="fa-solid fa-play"></i></a></li>
-						<li class="fw-semibold d-flex align-items-center">Play Video</li>
-					</ul>
-				</div>
+		<div id="ChickenContainer">
+			<div class="chicken">
+				<i class="fa-solid fa-egg"></i>
+				<img src="images/hen-right.png" alt="chicken">
 			</div>
-			<div class="col-md-6 part part2">
-				<div class="item h-100">
-					<img src="images/globe-png-39540.png" alt="globe" class="globe wow animate__zoomIn" data-wow-duration="1.5s">
-				</div>
+			<div class="chicken">
+				<i class="fa-solid fa-egg"></i>
+				<img src="images/hen-right.png" alt="chicken">
+			</div>
+			<div class="chicken">
+				<i class="fa-solid fa-egg"></i>
+				<img src="images/hen-right.png" alt="chicken">
 			</div>
 		</div>
-	</div>
-	<a class="arrows" href="#AboutUs">
-		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">
-		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">
-		<img src="images/arrow-down.png" alt="arrow-down" class="img-fluid">	
-	</a>
-	
-	<img src="images/wavesOpacity.svg" class="wavesOpacity" alt="">
-</header>
 
-<section id="AboutUs">
-	<div class="container mb-lg-4">
-		<div class="title mb-4 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">ABOUT US</h2>
+		<div id="Start" class="py-2 text-center">
+			<h4 class="mb-1">Start Game</h4>
+			<i class="fa-regular fa-circle-play"></i>
 		</div>
-		<div class="content pt-5">
-		<div class="row">
-			<div class="col-lg-5 part1">
-				<div class="item rounded-3 wow animate__zoomIn" data-wow-duration="1.5s">
-					<img src="images/about.png" alt="about" class="img-fluid rounded-3">
-				</div>
-			</div>
-			<div class="col-lg-7 part2">
-				<div class="item">
-					<p class="wow animate__bounceIn"data-wow-duration="1.5s">Located in the heart of dynamic Egypt, <span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span> </span>is a fast-growing company fully equipped to fulfil your translation and localization requirements, whatever the size and scope of your project. Our personalized approach that reflects our passion and uncompromising commitment to every client has seen us enjoy constant and steady growth. We pride ourselves on our reputation for QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY – ensuring we deliver first-rate projects on time and on budget, every time. Our reputation is built on delivering reliable, accurate projects on time and on budget. Our 24/7 customer service allows us to solve your problems in real time with a fast turn-around. <span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span> </span> takes the stress out of the language translation and localization process by providing fast, high-quality service for every piece of communication you need translated – in any language, for any type of content.</p>
-				</div>
-			</div>
-		</div>
-		</div>
-	</div>
-</section>
 
-<section id="Services" class="pt-4 pt-lg-5">
-	<div class="container">
-		<div class="title mb-5 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">Services</h2>
+		<div id="Basket">
+			<span class="score">0</span>
+			<img src="images/basket2.png" alt="basket2" class="img-fluid">
 		</div>
-		<div class="content">
-		<div class="row row-gap-5">
-			
-		</div>
-		</div>
-	</div>
-	<div class="mt-5 py-5" id="Video">
-	<div class="container py-3">
-		<div class="title mb-5 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">WATCH VIDEO</h2>
-		</div>
-		<div class="content text-center">
-			<i class="fa-brands fa-youtube wow animate__zoomIn" data-wow-duration="1.5s" onclick="openPopup('video');"></i>
-		</div>
-	</div>
-</div>
-</section>
 
-<section id="WhyUs" class="py-5">
-	<div class="container mb-4 mb-lg-5">
-		<div class="title mb-5 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">WHY US?</h2>
-		</div>
-		<div class="row row-gap-4 row-lg-gap-0">
-			<div class="col-lg-4 col-md-6 part">
-				<div class="item wow animate__flipInY" data-wow-duration="1.5s">
-					<div class="box p-4">
-						<div class="content">
-							<h4 class="fw-bold mb-3">The Best</h4>
-							<p class="mb-0">At <span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span> </span>, each employee strives to embrace our core values of QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY. These values are reflected in every service we provide, whether large or small.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 part">
-				<div class="item wow animate__flipInY" data-wow-duration="1.5s">
-					<div class="box p-4">
-						<div class="content">
-							<h4 class="fw-bold mb-3">Solutions for all your language challenges</h4>
-							<p class="mb-0">Managing the multilingual content that gives a voice to your global strategy and brand is accompanied by many challenges – from the creation of content and its translation into many languages, to electronic publishing and printing across many formats. <span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span> </span> is your one stop solution to overcoming all these problems professionally and cost-effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-12 part">
-				<div class="item wow animate__flipInY" data-wow-duration="1.5s">
-					<div class="box p-4">
-						<div class="content">
-							<h4 class="fw-bold mb-3">Our highly qualified teams</h4>
-							<p class="mb-0"><span class="fw-medium"><span class="firstColor">L10N</span> <span class="secondColor">House</span> </span> understands your business. Your own assigned linguists, project manager and account manager are dedicated to provide outstanding service and deliver your project on schedule, within your budget & according to your own specifications.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<footer>
+			<img src="images/Easter-Eggs.png" alt="Easter-Eggs" class="img-fluid">
+		</footer>
 	</div>
-</section>
 
-<section id="LanguageSectors">
-	<div class="part1 py-5">
-	<div class="container">
-		<div class="title mb-5 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">LANGUAGES & SECTORS</h2>
-		</div>
-		<div class="content">
-			<div class="buttons text-center">
-				<button class="btn secondColor fw-semibold me-3 me-lg-4 wow animate__zoomInLeft" data-wow-duration="1.5s" onclick="openPopup('sectors');">Sectors</button><button class="btn secondColor fw-semibold wow animate__zoomInRight" data-wow-duration="1.5s" onclick="openPopup('languages');">Languages</button>
-			</div>
-		</div>
-	</div>
-	</div>
-	<div class="part2 py-5">
-		<div class="container">
-			<div class="title mb-5 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">SATISFIED CLIENTS</h2>
-		</div>
-		<div class="content">
-			<div class="item">
-				<div class="owl-carousel">
-  				<div> <img src="images/clients/ab.jpg" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/amazon.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/dell.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/discovery.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/hotel.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/kia.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/olympus.jpg" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/pwc.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/Siem.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/tom.png" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/wd.jpg" alt="clients-img" class="img-fluid"></div>
-  				<div> <img src="images/clients/zebra.png" alt="clients-img" class="img-fluid"></div>
-				</div>
-			</div>	
-		</div>
-		</div>
-	</div>
-</section>
-
-<section id="ContactUs" class="py-4 py-lg-5">
-	<div class="container">
-		<div class="title mb-4 wow animate__heartBeat">
-			<h2 class="h1 fw-bold text-center">GET IN TOUCH</h2>
-		</div>
-		<div class="content">
-			<p class="text-center mb-5 wow animate__heartBeat">For More information, please do not hesitate to contact us.</p>
-			<div class="row">
-				<div class="col-md-6 part mb-4 mb-md-0">
-					<div class="item p-4 wow animate__bounceInLeft" data-wow-duration="1.5s">
-						<form>
-							<div class="row">
-						  <div class="mb-3 col-lg-6">
-						    <input type="text" class="form-control" placeholder="Full Name*" required pattern="^[\s]*[A-Za-z]{3,}[\s]*$">
-						  </div>
-						  <div class="mb-3 col-lg-6">
-						    <input type="text" class="form-control" placeholder="Email Address*" required pattern="^[a-zA-Z][a-zA-Z_.0-9]*@(gmail|yahoo).(com|io|org)*$">
-						  </div>
-						  </div>
-						  <div class="mb-3">
-						    <input type="text" class="form-control" placeholder="Phone Number*" required pattern="^[\s]*(02)?01(0|1|2|5)[0-9]{8}[\s]*$">
-						  </div>
-						  <textarea class="form-control mb-3" placeholder="Your Message..." rows="5"></textarea>
-						  <button type="submit" class="btn btn-secondColor fw-semibold">Send Message</button>
-						</form>
-					</div>
-				</div>
-				<div class="col-md-6 part">
-					<div class="item px-xl-4 px-4 py-4 wow animate__bounceInRight" data-wow-duration="1.5s">
-						<div class="row mb-2">
-							<div class="col-1 part-inside">
-								<div class="item"><i class="fa-solid fa-location-dot secondColor"></i></div>
-							</div>
-							<div class="col-11 ps-4 pe-0 ps-xl-2">
-								<div class="item">
-									<h6 class="fw-bold mb-0">Address</h6>
-									<p>178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row mb-2">
-							<div class="col-1 part-inside">
-								<div class="item"><i class="fa-solid fa-phone-flip secondColor"></i></div>
-							</div>
-							<div class="col-11 ps-4 pe-0 ps-xl-2">
-								<div class="item">
-									<h6 class="fw-bold mb-0">Phone</h6>
-									<p>(+202) 3825 0102 | (+202) 3825 0105</p>
-								</div>
-							</div>
-						</div>
-						<div class="row mb-2">
-							<div class="col-1 part-inside">
-								<div class="item"><i class="fa-solid fa-envelope secondColor"></i></div>
-							</div>
-							<div class="col-11 ps-4 pe-0 ps-xl-2">
-								<div class="item">
-									<h6 class="fw-bold mb-0">E-mail</h6>
-									<p>info@l10nhouse.com</p>
-								</div>
-							</div>
-						</div>
-						<ul class="list-unstyled d-flex column-gap-3 mb-0">
-							<li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-							<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<footer class="py-2">
-	<p class="mb-0 text-center">&copy; 2021 <span class="fw-bold">SemiCode</span>, Ltd. | All Rights Reserved .</p>
-</footer>
-
-<div class="loadingPage">
-	<div class="box"><img src="images/logo.png" alt="logo loadingPage"></div>
-</div>
-
-<div class="popup" popup-type-name="sectors" onclick="closePopup('sectors')">
-	<div class="box rounded-3">
-		<div class="head py-2">
-			<h6 class="text-center fw-bold">Sectors</h6>
-			<i class="fa-solid fa-xmark" onclick="closePopup('sectors')"></i>
-		</div>
-		<div class="body py-3">
-			<div class="row row-gap-4">
-				
-				<!-- <div class="col-lg-3">
-					<div class="item rounded-3"><img src="images/sec/agri.png" alt="" class="img-fluid mb-3">
-						<div class="type w-100">
-							<p class="mb-0 text-center">Appliances</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="item rounded-3"><img src="images/sec/agri.png" alt="" class="img-fluid mb-3">
-						<div class="type w-100">
-							<p class="mb-0 text-center">Automotive & Trucks</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="item rounded-3"><img src="images/sec/agri.png" alt="" class="img-fluid mb-3">
-						<div class="type w-100">
-							<p class="mb-0 text-center">Automotive & Trucks</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="item rounded-3"><img src="images/sec/agri.png" alt="" class="img-fluid mb-3">
-						<div class="type w-100">
-							<p class="mb-0 text-center">Aviation</p>
-						</div>
-					</div>
-				</div> -->
-			</div>
-		</div>
-	</div>
-</div>
-<div class="popup" popup-type-name="languages" onclick="closePopup('languages')">
-	<div class="box">
-		<div class="head py-3">
-			<i class="fa-solid fa-square-xmark" onclick="closePopup('languages')"></i>
-		</div>
-		<div class="body px-4">
-		</div>
-	</div>
-</div>
-
-<div class="popup" popup-type-name="service" onclick="closePopup('service')">
-	<div class="box rounded-3">
-		<div class="head py-2">
-			<h6 class="text-center fw-bold">services</h6>
-			<i class="fa-solid fa-xmark" onclick="closePopup('service')"></i>
-		</div>
-		<div class="body px-4 py-3">
-		</div>
-	</div>
-</div>
-
-<div class="popup" popup-type-name="video" onclick="closePopup('video')">
-	<div class="box">
-		<!-- <iframe src="https://www.youtube.com/embed/BMLRFrmRbKQ" title="Motion Graphics | Mister translation site" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen muted></iframe> -->
-		<iframe width="933" height="525" src="https://www.youtube.com/embed/K23TEYr_SLU" title="سورة البقرة 🖤 الحصري شاشة سوداء | Surah Al-Baqarah Al-Hussary Black Screen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</div>
-</div>
-<a class="arrowTop" href="#"><i class="fa-solid fa-up-long"></i> To Top
-</a>
 	<script src="js/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="js/plugins/headlinesAnimated.js"></script>
-	<script src="js/plugins/wow.min.js"></script>
-	<script src="js/plugins/owl.carousel.min.js"></script>
 	<script src="js/function.js"></script>
 	<script src="js/index.js"></script>
 </body>

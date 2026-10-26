@@ -1,0 +1,11 @@
+@use "./../abstracts" as *;
+nav{
+	background: #4b0082; 
+	background: -webkit-linear-gradient(to right, #fdcf58, #ff0000); 
+	background: linear-gradient(to right, #fdcf58, #ff0000);
+
+	color: #fff; 
+	.textScore{
+		color: #c10839;
+	}
+}
